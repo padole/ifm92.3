@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/ifm-logo.jpg" alt="">
+        <!-- <h1 class="sitename">Dewi</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="oap.html">OAPS</a></li>
+
+
+          <li><a href="news-events.html">News & Events</a></li>
+
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="tel:0700923923923">Call Us Live: 0700923923923</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/ifm-banner.jpg" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center">
+
+        <h2 data-aos="fade-up" data-aos-delay="100">LISTEN - ON-AIR NOW</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Your #1 Family Radio</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300" style="gap: 18px; flex-wrap: wrap; justify-content:center;">
+          <button id="listen-live-btn" type="button" class="btn-get-started btn-listen-live" aria-label="Play/Pause Live Audio">
+            <i id="listen-live-icon" class="bi bi-play-circle" aria-hidden="true"></i>
+            <span id="listen-live-label">Listen Live</span>
+          </button>
+
+          <a href="#" id="watch-live-link" class="glightbox btn-watch-video d-flex align-items-center" data-glightbox="title:Watch Live">
+            <i class="bi bi-play-circle"></i>
+            <span>Watch Live</span>
+          </a>
+
+        </div>
+
+        <div class="mt-3 text-center" aria-live="polite">
+          <div id="listen-live-status" class="listen-live-status" style="display:none"></div>
+          <div class="listen-live-substatus" id="listen-live-substatus" style="display:none"></div>
+        </div>
+
+        <div class="live-video-wrap" style="display:none; margin-top:18px;">
+          <video id="live-video" class="live-video" controls playsinline preload="none" style="width:100%; max-width:900px; background:#000;"></video>
+          <input type="hidden" id="live-video-source-url" value="https://azstream.elektranbroadcast.com/listen/ifm923/radio.mp3" />
+          <div id="live-video-fallback" class="listen-live-substatus" style="display:none; margin-top:10px;"></div>
+        </div>
+
+          <audio id="live-audio" preload="none" crossorigin="anonymous">
+          <!-- Listen Live stream -->
+          <source id="live-audio-source" src="https://azstream.elektranbroadcast.com/listen/ifm923/radio.mp3" type="audio/mpeg" />
+        </audio>
+
+
+        <div id="live-video-fallback" class="listen-live-substatus" style="display:none; margin-top:10px;"></div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+      <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>OAPS</h2>
+        <p>CHECK OUT OUR OAPS</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="assets/img/anthony-ajulu.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Anthony Ajulu</h4>
+                <span>Anthony Ajulu is a versatile and well-versed sports aficionado whose range covers numerous sports.
+                  Catch Anthony every weekday on Sports Edge by 7:30am & Final Score by 5:30pm.</span><br>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="assets/img/azubuike-osumili.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Azubuike Osumili</h4>
+                <span>AZUBIKE OSUMILI is an award-winning journalist who has worked on the radio for 20 consecutive years as a Reporter, Correspondent,
+                  Editor, and in Radio management.</span><br>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/stanley-uche.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Stanley Uche</h4>
+                <span>Stanley Uche is a Music Producer and Sound Engineer.
+                  He has worked with some notable artists in Niger Delta. He is also a Gospel Rap and a Voice Over artist. Stanley Uche is from Imo State</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/obed-david.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Obed David</h4>
+                <span>Obed David is a smart, intelligent, and forward-thinking creative,
+                  with a rich deep baritone that is uniquely identifiable to him. He hails from Urue Offong/Oruko LGA in Akwa Ibom state.</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/kolade-dominate.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Kolade Dominate</h4>
+                <span>Victor Akolade Olowu Popularly known as Kolade Dominate is a
+                  graduate of Digital Multimedia Technology Highland College of Technology and Mass Communication from UPAO Port Novo, Benin Republic</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/okiki.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Okikioluwa Akindele</h4>
+                <span>Okikioluwa Akindele is a graduate of Public Relations, Advertising and Media from Middlesex University.</span> <br>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+            <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>Who We Are</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <!-- <h3 class="text-center">Who We Are</h3> -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/about-section.jpg" class="img-fluid rounded-4 mb-4" alt="">
+            <!-- <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
+            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus 
+              et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed 
+              ut omnis beatae neque deleniti repellendus.</p> -->
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <!-- <p class="fst-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p> -->
+              <!-- <ul>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+              </ul> -->
+              <p>
+                We are Inspiration 92.3FM, a family radio station that caters to the needs of many of the key demographics represented within the family.
+                Inspiration, as the name implies, is a divinely originated concept that incorporates ideas, music and information intended to uplift the spirit of the listener and encourage interaction.
+              </p>
+              <p>
+                Our aim is to infuse positive energy into the minds of our listeners to help them understand their environment and navigate 
+                the challenges they encounter daily. We encourage our listeners to imbibe faith, good morals, virtue and ethics in their 
+                daily living.</p>
+              <p>
+                We are intentional about every show we broadcast to ensure that our listeners explore their potentials and live purposeful
+                 lives to be the change they want to see in their world. Our shows are specially designed to accommodate all ages in the
+                  family and suit everyone’s needs.</p>
+              <p>
+                At Inspiration 92.3FM, we engage, we inspire, we motivate, we entertain, we inform, and we educate.</p>
+
+              <!-- <div class="position-relative mt-4">
+                <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="">
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Shows by Category Section -->
+    <section id="shows" class="shows-by-category section">
+
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2>Shows</h2>
+        <p>OUR SHOWS &amp; SCHEDULE</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-">
+
+          <div class="col-lg-3">
+            <ul class="nav nav-pills news-events-tabs-list flex-column" role="tablist" aria-label="Show Categories">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-1" role="tab" aria-controls="shows-cat-1" aria-selected="true">
+                  <i class="bi bi-music-note-beamed me-2"></i>
+                  <span>Breakfast Jam</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-2" role="tab" aria-controls="shows-cat-2" aria-selected="false">
+                  <i class="bi bi-sun me-2"></i>
+                  <span>Tea Break</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-3" role="tab" aria-controls="shows-cat-3" aria-selected="false">
+                  <i class="bi bi-moon me-2"></i>
+                  <span>Lunch Time</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Night Time</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Saturday Breakfast Jam</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Saturday Aftenoon Show</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Saturday Night Time</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Sunday Praise Jam</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Sunny Side of Sunday</span>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link show" type="button" data-bs-toggle="tab" data-bs-target="#shows-cat-4" role="tab" aria-controls="shows-cat-4" aria-selected="false">
+                  <i class="bi bi-stars me-2"></i>
+                  <span>Sunday Night Time</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content">
+
+              <div class="tab-pane fade active show" id="shows-cat-1" role="tabpanel" aria-labelledby="shows-cat-1-tab" tabindex="0">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Breakfast Jam</div>
+                      <div class="show-meta"><span class="label">Host:</span> Captain Smart</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays - Fridays (5:00am – 10:00am)</div>
+                      <div class="show-description  ">Start your day with uplifting music, prayers, and encouragement for the whole family.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Kiddies Corner</div>
+                      <div class="show-meta"><span class="label">Host:</span> Captain Smart</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Fridays (7:15am – 7:30am)</div>
+                      <div class="show-description">An edutainment show where children call in to answer educative questions ranging from current affairs, popular cartoons</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Sports Edge</div>
+                      <div class="show-meta"><span class="label">Host:</span> IFM Sports Team</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Fridays (7:30am – 7:50am)</div>
+                      <div class="show-description">On Sports Edge, we bring you the very latest from inside the World of Sports, giving you exclusive previews, reviews,…</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">The Big Story</div>
+                      <div class="show-meta"><span class="label">Host:</span> Azubike Osumil</div>
+                      <div class="show-meta"><span class="label">Time:</span>Mondays - Fridays (6:00am – 7:00am)</div>
+                      <div class="show-description">Join Azu Osumili, our in-house political analyst as he examines variety of controversial topics.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Around Town</div>
+                      <div class="show-meta"><span class="label">Host:</span>Captain Smart</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Fridays (7:30am – 7:50am)</div>
+                      <div class="show-description">Around Town" is a compelling and thought-provoking radio show </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Paper View</div>
+                      <div class="show-meta"><span class="label">Host:</span> Azubike Osumili</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays - Fridays (08:00am-09:00am)</div>
+                      <div class="show-description">Join our in-house political analyst as he examines a variety of controversial topics within the world of politics</div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /Morning -->
+
+              <div class="tab-pane fade" id="shows-cat-2" role="tabpanel" aria-labelledby="shows-cat-2-tab" tabindex="0">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Tea Break</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays - Fridays (11:00am - 12:15pm)</div>
+                      <div class="show-description">TEA BREAK is a highly engaging belt that thrills listeners with different flavors of shows on different days </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Your Baby And You</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Thursdays (11:00am - 11:30am)</div>
+                      <div class="show-description">Your Baby and You is an interactive show scheduled for you where topical issues ranging from new moms, pregnancy, discomforts… </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Naija Kitchen</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> (Fridays) (12:30pm- 1:00pm)</div>
+                      <div class="show-description">A segment that celebrates good food where we reel out recipes for different 9ja dishes with several professional chefs. </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">On-Air Book Club</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> (Fridays) (11:00am - 11:30am)</div>
+                      <div class="show-description">The on-air book club is a show that is designed for book lovers. In this segment, the vibrant OAPs get… </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">E-Xtra</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays - Fridays (10:00am – 10:30am)</div>
+                      <div class="show-description">E-Extra is a segment where we share the Latest Trending Entertainment News, Happenings and Stories </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Premier League Zone</div>
+                      <div class="show-meta"><span class="label">Host:</span> IFM Sports Team</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Fridays (10:30am – 11:00am)</div>
+                      <div class="show-description">The Best English Premier League coverage and analysis. Let the IFM Sports Crew take you on an in-depth dive into…</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Naija People In Business</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Tuesdays (11:00am – 11:30am)</div>
+                      <div class="show-description">NAIJA PEOPLE IN BUSINESS, a show available exclusively only on Your Number One Family Radio. </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Sports Waka</div>
+                      <div class="show-meta"><span class="label">Host:</span> BODE BRUNO</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Fridays (12:15pm – 12:30pm)</div>
+                      <div class="show-description">A pidgin (vernacular) based sports show where the latest updates in the sport world is discussed and listeners can voice… </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Mid-Day Rewind</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mondays – Wednesdays (12:30pm – 1:00pm)</div>
+                      <div class="show-description">On this show, the Tea Break Crew take listeners down memory lane, discussing habits, happenings, situations and trends from yesteryears.… </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Orijinal Naija</div>
+                      <div class="show-meta"><span class="label">Host:</span> Senate President and distinguished Senators</div>
+                      <div class="show-meta"><span class="label">Time:</span> Mons, Weds & Frids (1:00pm – 2:00pm)</div>
+                      <div class="show-description">The Senate is in session every Monday and Wednesday from 1pm and every Friday from 1:15pm to 03:00pm. They boldly… </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Wellness Wednesday</div>
+                      <div class="show-meta"><span class="label">Host:</span> Tea Break Crew</div>
+                      <div class="show-meta"><span class="label">Time:</span> Wednesdays (11:00am-11:30am)</div>
+                      <div class="show-description">On Wellness Wednesday, we are on a mission to promote healthy habits and lifestyles. Every Wednesday from 11am, we delve… </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /Afternoon -->
+
+              <div class="tab-pane fade" id="shows-cat-3" role="tabpanel" aria-labelledby="shows-cat-3-tab" tabindex="0">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Placeholder Show 5</div>
+                      <div class="show-meta"><span class="label">Host:</span> Placeholder Host E</div>
+                      <div class="show-meta"><span class="label">Time:</span> 18:00 - 20:00</div>
+                      <div class="show-description">Evening uplift: inspiring discussions, uplifting hymns, and family-friendly entertainment.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Placeholder Show 6</div>
+                      <div class="show-meta"><span class="label">Host:</span> Placeholder Host F</div>
+                      <div class="show-meta"><span class="label">Time:</span> 20:00 - 22:00</div>
+                      <div class="show-description">Night reflections: encouraging stories, prayer segments, and restful music to close the day.</div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /Evening -->
+
+              <div class="tab-pane fade" id="shows-cat-4" role="tabpanel" aria-labelledby="shows-cat-4-tab" tabindex="0">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Placeholder Show 7</div>
+                      <div class="show-meta"><span class="label">Host:</span> Placeholder Host G</div>
+                      <div class="show-meta"><span class="label">Time:</span> Saturdays 10:00 - 12:00</div>
+                      <div class="show-description">Saturday specials: family topics, live discussions, and uplifting music for the weekend.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="show-item">
+                      <div class="show-title">Placeholder Show 8</div>
+                      <div class="show-meta"><span class="label">Host:</span> Placeholder Host H</div>
+                      <div class="show-meta"><span class="label">Time:</span> Sundays 09:00 - 11:00</div>
+                      <div class="show-description">Sunday morning inspiration: worship moments, faith lessons, and warm family conversations.</div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- /Special -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Shows by Category Section -->
+
+
+
+        <!-- News Categories -->
+    <section id="news-events" class="news-events section">
+      <div class="container">
+
+        <div class="section-title text-center" data-aos="fade-up">
+          <h2>News</h2>
+          <p>News & Entertainment</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Category Tabs (Top) -->
+          <div class="col-12">
+            <div class="news-events-tabs">
+              <ul class="nav nav-pills news-events-tabs-list" role="tablist" aria-label="News Categories Tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active news-tab" type="button" data-bs-toggle="tab" data-bs-target="#news-trending" role="tab" aria-controls="news-trending" aria-selected="true">
+                    <i class="bi bi-lightning-charge"></i>
+                    Trending
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link news-tab" type="button" data-bs-toggle="tab" data-bs-target="#news-politics" role="tab" aria-controls="news-politics" aria-selected="false">
+                    <i class="bi bi-building"></i>
+                    Politics
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link news-tab" type="button" data-bs-toggle="tab" data-bs-target="#news-entertainment" role="tab" aria-controls="news-entertainment" aria-selected="false">
+                    <i class="bi bi-film"></i>
+                    Entertainment
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link news-tab" type="button" data-bs-toggle="tab" data-bs-target="#news-sports" role="tab" aria-controls="news-sports" aria-selected="false">
+                    <i class="bi bi-dribbble"></i>
+                    Sports
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cards per Category -->
+          <div class="col-12">
+            <div class="tab-content mt-4">
+
+
+              <!-- Trending -->
+              <div class="tab-pane fade active show" id="news-trending" role="tabpanel" aria-labelledby="news-trending-tab">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/Trending1.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-warning">Trending</span>
+                          <span class="news-date">Today</span>
+                        </div>
+                        <h3>Ogun Monarch Commends Tinubu’s Commitment to National Growth and Inclusive Development</h3>
+                        <p>The Olota of Otta, Awori Kingdom, Oba Adeyemi Obalanlege, has commended President Bola Tinubu for his strong commitment to national growth and inclusive development...
+                          </p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="150">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/trending2.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-warning">Trending</span>
+                          <span class="news-date">This week</span>
+                        </div>
+                        <h3>Kwara APC Stakeholders Vow to Respect Tinubu and Governor’s Decision on Consensus Arrangement</h3>
+
+                        <p>Stakeholders of the All Progressives Congress (APC) in Kwara State have pledged to support and abide by any consensus arrangement adopted by President Bola Ahmed Tinubu and the party leadership ahead of the 2027 general elections.</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/trending3.jpg" alt="" />
+                        <div class="news-meta">
+
+                          <span class="badge text-bg-warning">Trending</span>
+                          <span class="news-date">Yesterday</span>
+                        </div>
+                        <h3>Yobe APC Governorship Aspirants Reject Consensus, Demand Primary Election</h3>
+                        <p>Six governorship aspirants of the All Progressives Congress (APC) in Yobe State have rejected the alleged endorsement of a consensus candidate ahead of the 2027 governorship election, insisting that the process violates the Electoral Act and the party’s constitution.</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="250">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/trending4.jpg" alt="" />
+                        <div class="news-meta">
+
+                          <span class="badge text-bg-warning">Trending</span>
+                          <span class="news-date">Last 7 days</span>
+                        </div>
+                        <h3>Dutch Airline Flight Attendant Tests Negative for Hantavirus — WHO</h3>
+                        <p>A flight attendant for Dutch airline KLM who showed mild symptoms of hantavirus and was admitted to hospital in Amsterdam has tested negative for the virus, the World Health Organisation (WHO) said on Friday.</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Politics -->
+              <div class="tab-pane fade" id="news-politics" role="tabpanel" aria-labelledby="news-politics-tab">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/politics1.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-primary">Politics</span>
+                          <span class="news-date">Today</span>
+                        </div>
+                        <h3>Hayatu-Deen Picks Up N100m ADC Presidential Nomination Form</h3>
+                        <p>Presidential aspirant Mohammed Hayatu-Deen has picked up the African Democratic Congress expression of interest and nomination forms ahead of the 2027 elections, pledging to tackle insecurity, create jobs, and reduce the high cost of....</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="150">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/politics2.jpg" alt="" />
+                        <div class="news-meta">
+
+                          <span class="badge text-bg-primary">Politics</span>
+                          <span class="news-date">This week</span>
+                        </div>
+                        <h3>Adelabu mobilises APC ward executives over governorship ambition</h3>
+                        <p>Former Minister of Power and 2027 governorship aspirant under the All Progressives Congress in Oyo State, Adebayo Adelabu, on Wednesday met with APC ward executives from... </p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/politics3.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-primary">Politics</span>
+                          <span class="news-date">Yesterday</span>
+                        </div>
+                        <h3>A’Ibom governor submits APC nomination form, seeks party backing</h3>
+                        <p>Akwa Ibom State Governor, Umo Eno, has submitted his nomination form for the primaries of the All Progressives Congress and appealed to party members...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="250">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/politics4.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-primary">Politics</span>
+                          <span class="news-date">Last 7 days</span>
+                        </div>
+                        <h3>Kwara APC Chieftain Warns Against Automatic Tickets for Lawmakers</h3>
+                        <p>The President of Orisun Igbomina, Gbenga Awoyale, has cautioned All Progressives Congress stakeholders in Kwara South Senatorial District against moves to grant automatic tickets...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Entertainment -->
+              <div class="tab-pane fade" id="news-entertainment" role="tabpanel" aria-labelledby="news-entertainment-tab">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/enter1.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-danger">Entertainment</span>
+                          <span class="news-date">Today</span>
+                        </div>
+                        <h3>Teddy A: Wife-Beating Allegations Almost Ruined My Marriage</h3>
+                        <p>Reality TV star and actor Tope Adenibuyan, popularly known as Teddy A, has opened up about the severe emotional and reputational toll caused by false allegations that... </p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="150">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/enter2.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-danger">Entertainment</span>
+                          <span class="news-date">This week</span>
+                        </div>
+                        <h3>After a Decade, Tonto Dikeh Reveals Son’s Joyful Reunion with Father, Prompting Faith-Filled Cheers Across Social Media</h3>
+                        <p>Nollywood actress Tonto Dikeh has sparked an outpouring of heartfelt reactions online after sharing an emotional video of her son, King Andre, reuniting with his father...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/enter3.png" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-danger">Entertainment</span>
+                          <span class="news-date">Yesterday</span>
+                        </div>
+                        <h3>Celebrity Designer Veekee James and Husband Announce Pregnancy</h3>
+                        <p>Celebrity fashion designer Victoria James, popularly known as Veekee James, and her husband, Femi Atere, are expecting their first child together...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="250">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/enter4.jpeg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-danger">Entertainment</span>
+                          <span class="news-date">Last 7 days</span>
+                        </div>
+                        <h3>Drama in Afrobeat: Seun Kuti Says Wizkid Stole His Name</h3>
+                        <p>Nigerian Afrobeat star Seun Kuti has accused Afrobeats superstar Wizkid of stealing his longtime nickname “Big Bird.”...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sports -->
+              <div class="tab-pane fade" id="news-sports" role="tabpanel" aria-labelledby="news-sports-tab">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="100">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/sport1.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-success">Sports</span>
+                          <span class="news-date">Today</span>
+                        </div>
+                        <h3>Premier League Clubs Book All Three UEFA Finals in May, Including Venues, Dates and Kick-off Times</h3>
+                        <p>English football is heading into a historic May as Premier League clubs have reached the finals of all three UEFA competitions for the first time ever...</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="150">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/sport2.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-success">Sports</span>
+                          <span class="news-date">This week</span>
+                        </div>
+                        <h3>Rooney Slams Tuchel for Omitting Alexander-Arnold from England’s World Cup Squad</h3>
+                        <p>Former England captain Wayne Rooney has criticised England manager Thomas Tuchel for leaving Trent Alexander-Arnold out of the squad ahead of the 2026 World....</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="200">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/sport3.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-success">Sports</span>
+                          <span class="news-date">Yesterday</span>
+                        </div>
+                        <h3>Burnley boss Parker leaves club after relegation</h3>
+                        <p>Scott Parker don leave him job as Burnley head coach by mutual agreement after the club relegate from Premier League.</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-md-3">
+                    <article class="news-card" data-aos="fade-up" data-aos-delay="250">
+                      <div class="news-card-body">
+                        <img class="news-card-image" src="assets/img/sport4.jpg" alt="" />
+                        <div class="news-meta">
+                          <span class="badge text-bg-success">Sports</span>
+                          <span class="news-date">Last 7 days</span>
+                        </div>
+                        <h3>Super Eagles: Oliseh names Nigeria’s first real superstar</h3>
+                        <p>Former Super Eagles midfielder Sunday Oliseh has praised the late Nigerian football legend Stephen Keshi, describing him as the nation’s first genuine superstar.</p>
+                        <a class="news-link" href="#">Read more <i class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /tab-content -->
+          </div>
+
+        </div><!-- /row -->
+
+      </div>
+    </section><!-- /news-events -->
+
+
+
+
+
+
+  </main>
+
+  <script>
+    (function () {
+      function initOAPContent() {
+        var target = document.getElementById('oap-content');
+        if (!target) return;
+
+        fetch('oap-content.html')
+          .then(function (r) { return r.text(); })
+          .then(function (html) {
+            target.innerHTML = html;
+          })
+          .catch(function () {
+            target.innerHTML = '<p class="text-center">OAPS content could not be loaded.</p>';
+          });
+      }
+
+      window.addEventListener('DOMContentLoaded', initOAPContent);
+    })();
+  </script>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/ifm-logo.jpg" alt="">
+            <!-- <span class="sitename">Dewi</span> -->
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Plot 2E-4E Ligali Ayorinde St,</p>
+            <p>Victoria Island, Lagos.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>0201-2770923</span></p>
+            <p><strong>Email:</strong> <span>info@ifm923.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="news-events.html">News & Events</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="contact-us.html">Contact Us</a></li>
+            <!-- <li><i class="bi bi-chevron-right"></i> <a href="privacy-policy.html">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Stations</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Ibadan</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Uyo</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Lasgidi 90.1 FM Lagos</a></li>
+            <!-- <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Download Our App</h4>
+          <p>Get the latest updates and news from IFM 92.3 right on your mobile device. Download our app now and stay connected with us wherever you go!</p>
+          <div class="d-flex">
+            <a href="#" class="btn btn-primary me-2"><i class="bi bi-apple"></i> App Store</a>
+            <a href="#" class="btn btn-danger"><i class="bi bi-google-play"></i> Google Play</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Inspiration 92.3 FM is operated by Amazing Inspirations Media Limited.</strong> <span>All Rights Reserved</span></p>
+      <!-- <div class="credits"> -->
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a> -->
+      <!-- </div> -->
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
